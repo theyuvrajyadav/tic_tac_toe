@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tic_tac_toe/splash_screen.dart';
@@ -46,9 +45,13 @@ class _MyAppState extends State<MyApp> {
 
   void _toggleThemeMode() {
     setState(() {
-      if (_mode == ThemeMode.light) _mode = ThemeMode.dark;
-      else if (_mode == ThemeMode.dark) _mode = ThemeMode.system;
-      else _mode = ThemeMode.light;
+      if (_mode == ThemeMode.light) {
+        _mode = ThemeMode.dark;
+      } else if (_mode == ThemeMode.dark) {
+        _mode = ThemeMode.system;
+      } else {
+        _mode = ThemeMode.light;
+      }
     });
   }
 
@@ -87,5 +90,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-
